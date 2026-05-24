@@ -1,0 +1,131 @@
+
+/* ── CSS Variables ───────────────────── */
+:root {
+  --beige: #f1eddc;
+  --orange: #f05826;
+  --black: #1d1d1b;
+  --spacing-s: 10px;
+  --spacing-m: 20px;
+  --spacing-l: 40px;
+  --spacing-xl: 60px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--black);
+  font-family: 'DM Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+::-webkit-scrollbar { display: none; }
+
+.c-orange { color: var(--orange); }
+.c-beige  { color: var(--beige);  }
+.c-black  { color: var(--black);  }
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+
+.slide-fade { animation: fadeIn 0.7s ease; }
+
+@keyframes slideUpIn {
+  0%   { transform: translateY(100%); opacity: 0; }
+  18%  { opacity: 1; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+@keyframes slideUpOut {
+  0%   { transform: translateY(0);     opacity: 1; }
+  82%  { opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
+}
+@keyframes slideDownIn {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  18%  { opacity: 1; }
+  100% { transform: translateY(0);     opacity: 1; }
+}
+@keyframes slideDownOut {
+  0%   { transform: translateY(0);    opacity: 1; }
+  82%  { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+.panel-enter-up,
+.panel-exit-up,
+.panel-enter-down,
+.panel-exit-down  { will-change: transform, opacity; }
+
+.panel-enter-up   { animation: slideUpIn    0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+.panel-exit-up    { animation: slideUpOut   0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+.panel-enter-down { animation: slideDownIn  0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+.panel-exit-down  { animation: slideDownOut 0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+
+@keyframes drawerIn {
+  from { transform: translateX(-100%) }
+  to   { transform: translateX(0) }
+}
+@keyframes drawerOut {
+  from { transform: translateX(0) }
+  to   { transform: translateX(-100%) }
+}
+@keyframes overlayIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+@keyframes overlayOut {
+  from { opacity: 1 }
+  to   { opacity: 0 }
+}
+
+.nav-overlay-in  { animation: overlayIn  0.4s ease forwards; }
+.nav-overlay-out { animation: overlayOut 0.4s ease forwards; }
+.nav-drawer-in   { animation: drawerIn  0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.nav-drawer-out  { animation: drawerOut 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  ::-webkit-scrollbar { display: none; }
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.link-underline:hover::after { transform: scaleX(1); }
