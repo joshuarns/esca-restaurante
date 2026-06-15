@@ -58,20 +58,20 @@ export default function SideNav() {
       <div style={{
         position: 'fixed', left: 0, top: 0, bottom: 0, width: handleWidth, zIndex: 40,
         display: 'flex', flexDirection: 'column', alignItems: 'center',
-        justifyContent: 'flex-end', paddingBottom: isMobile ? 20 : 32, gap: 14,
+        justifyContent: 'center',
         pointerEvents: 'none',
-        borderRight: '1px solid rgba(241,237,220,0.8)',
+        borderRight: '1px solid rgba(241,237,220,0.5)',
       }}>
         <button style={s.toggleBtn} onClick={handleOpen} aria-label="Open menu">
           <span style={{
             writingMode: 'vertical-rl', transform: 'rotate(180deg)',
-            fontSize: labelSize, letterSpacing: '0.14em',
-            color: '#f1eddc', fontFamily: 'inherit',
-          }}>About</span>
-          <svg width={arrowW} height={arrowH}
-            viewBox="0 0 20 12" fill="none"
+            fontSize: labelSize, letterSpacing: '0.25em', textTransform: 'uppercase',
+            color: '#f1eddc', fontFamily: 'inherit', fontWeight: 300,
+          }}>Acerca de</span>
+          <svg width={arrowH} height={arrowW}
+            viewBox="0 0 12 20" fill="none"
             style={{ marginTop: arrowMT }}>
-            <path d="M1 1L10 11L19 1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+            <path d="M1 1L11 10L1 19" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
           </svg>
         </button>
       </div>

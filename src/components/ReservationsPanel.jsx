@@ -13,20 +13,20 @@ export default function ReservationsPanel() {
     <div style={{
       position: 'fixed', right: 0, top: 0, bottom: 0, width: handleWidth, zIndex: 40,
       display: 'flex', flexDirection: 'column', alignItems: 'center',
-      justifyContent: 'flex-end', paddingBottom: isMobile ? 20 : 32,
-      borderLeft: '1px solid rgba(241,237,220,0.8)',
+      justifyContent: 'center',
+      borderLeft: '1px solid rgba(241,237,220,0.5)',
     }}>
       <a href="https://www.sevenrooms.com/reservations/esca"
         target="_blank" rel="noreferrer" style={s.link}>
         <span style={{
           writingMode: 'vertical-rl', transform: 'rotate(180deg)',
-          fontSize: labelSize, letterSpacing: '0.14em',
-          textTransform: 'none',
-        }}>Reservations</span>
-        <svg width={arrowW} height={arrowH}
-          viewBox="0 0 20 12" fill="none"
+          fontSize: labelSize, letterSpacing: '0.25em',
+          textTransform: 'uppercase', fontWeight: 300,
+        }}>Reservas</span>
+        <svg width={arrowH} height={arrowW}
+          viewBox="0 0 12 20" fill="none"
           style={{ marginTop: arrowMT }}>
-          <path d="M1 1L10 11L19 1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+          <path d="M1 1L11 10L1 19" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
         </svg>
       </a>
     </div>
