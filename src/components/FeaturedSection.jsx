@@ -1,3 +1,5 @@
+import { useBreakpoint } from '../hooks/useBreakpoint'
+
 const PANELS = [
   {
     label: 'Gastronomía',
@@ -16,15 +18,21 @@ const PANELS = [
 ]
 
 export default function FeaturedSection() {
+  const { isMobile } = useBreakpoint()
+
   return (
-    <section style={s.section}>
+    <section style={{
+      ...s.section,
+      gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+    }}>
       {PANELS.map(({ label, title, cta, href, img }) => (
-        <div key={label} style={s.panel} className="featured-panel">
-          {/* Imagen de fondo */}
+        <div key={label} style={{
+          ...s.panel,
+          height: isMobile ? '55vw' : '70vh',
+          minHeight: isMobile ? 280 : 420,
+        }} className="featured-panel">
           <img src={img} alt={title} style={s.bg} className="featured-bg" />
           <div style={s.overlay} />
-
-          {/* Contenido centrado */}
           <div style={s.content}>
             <p style={s.label}>{label}</p>
             <h3 style={s.title}>{title}</h3>
@@ -40,9 +48,6 @@ const s = {
   section: {
     width: '100%',
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    height: '70vh',
-    minHeight: 480,
   },
   panel: {
     position: 'relative',
@@ -65,7 +70,7 @@ const s = {
     position: 'relative', zIndex: 1,
     display: 'flex', flexDirection: 'column',
     alignItems: 'center', textAlign: 'center',
-    gap: 20, padding: '0 32px',
+    gap: 16, padding: '0 24px',
   },
   label: {
     fontFamily: "'DM Sans', sans-serif",
@@ -75,7 +80,7 @@ const s = {
   },
   title: {
     fontFamily: "'Pinyon Script', cursive",
-    fontSize: 'clamp(52px, 6vw, 80px)',
+    fontSize: 'clamp(44px, 6vw, 80px)',
     fontWeight: 400, color: '#ffffff',
     lineHeight: 1.1, letterSpacing: '0.02em',
   },
@@ -86,7 +91,7 @@ const s = {
     letterSpacing: '0.22em', textTransform: 'uppercase',
     color: '#f1eddc', textDecoration: 'none',
     border: '1px solid rgba(241,237,220,0.6)',
-    padding: '12px 32px',
+    padding: '11px 28px',
     transition: 'background 0.2s, color 0.2s',
   },
 }

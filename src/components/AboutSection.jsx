@@ -1,18 +1,23 @@
+import { useBreakpoint } from '../hooks/useBreakpoint'
+
 export default function AboutSection() {
+  const { isMobile, isTablet } = useBreakpoint()
+
+  const padV = isMobile ? 72  : isTablet ? 100 : 120
+  const padH = isMobile ? 52  : isTablet ? 64  : 80
+  const bodySize = isMobile ? 14 : 16
+
   return (
-    <section style={s.section}>
+    <section style={{ ...s.section, padding: `${padV}px ${padH}px` }}>
       <div style={s.inner}>
 
-        {/* Label */}
         <p style={s.label}>Nuestra cocina</p>
 
-        {/* Titular */}
         <h2 style={s.headline}>
-          Sensibilidad italiana,<br />producto de mar.
+          Sensibilidad italiana,{isMobile ? ' ' : <br />}producto de mar.
         </h2>
 
-        {/* Cuerpo */}
-        <p style={s.body}>
+        <p style={{ ...s.body, fontSize: bodySize }}>
           Nuestra inspiración proviene de las costas y del producto que ofrecen,
           los platillos toman la forma que le dan nuestros viajes, lo que nos
           gusta comer y lo que ocurre con la cocina de mar en el mundo. Esca es
@@ -21,10 +26,8 @@ export default function AboutSection() {
           concepción de los espacios.
         </p>
 
-        {/* Logo cursivo sutil */}
-        <div style={s.scriptLogo}>esca</div>
+        <div style={{ ...s.scriptLogo, fontSize: isMobile ? 40 : 56 }}>esca</div>
 
-        {/* CTA */}
         <a href="/equipo" style={s.cta}>
           CONOCE AL EQUIPO
           <span style={s.ctaLine} />
@@ -39,7 +42,6 @@ const s = {
   section: {
     background: '#f1eddc',
     width: '100%',
-    padding: '120px 80px',
     display: 'flex', justifyContent: 'center',
   },
   inner: {
@@ -51,25 +53,23 @@ const s = {
     fontFamily: "'DM Sans', sans-serif",
     fontSize: 11, fontWeight: 400,
     letterSpacing: '0.3em', textTransform: 'uppercase',
-    color: '#8a7f6e', marginBottom: 28,
+    color: '#8a7f6e', marginBottom: 24,
   },
   headline: {
     fontFamily: "'DM Serif Display', serif",
-    fontSize: 'clamp(36px, 5vw, 58px)',
+    fontSize: 'clamp(30px, 5vw, 58px)',
     fontWeight: 400, lineHeight: 1.15,
-    color: '#1d1d1b', marginBottom: 40,
+    color: '#1d1d1b', marginBottom: 36,
     letterSpacing: '-0.01em',
   },
   body: {
     fontFamily: "'DM Sans', sans-serif",
-    fontSize: 16, fontWeight: 300,
-    lineHeight: 1.85, color: '#3a3530',
-    maxWidth: 620, marginBottom: 64,
+    fontWeight: 300, lineHeight: 1.85,
+    color: '#3a3530', maxWidth: 620, marginBottom: 52,
   },
   scriptLogo: {
     fontFamily: "'Pinyon Script', cursive",
-    fontSize: 56, color: '#c4b99a',
-    lineHeight: 1, marginBottom: 52,
+    color: '#c4b99a', lineHeight: 1, marginBottom: 44,
     userSelect: 'none',
   },
   cta: {

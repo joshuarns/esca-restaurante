@@ -1,4 +1,9 @@
+import { useBreakpoint } from '../hooks/useBreakpoint'
+
 export default function Hero() {
+  const { isMobile, isTablet } = useBreakpoint()
+
+  const logoSize  = isMobile ? 72  : isTablet ? 96  : 120
   const handleScroll = () =>
     window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
 
@@ -11,13 +16,11 @@ export default function Hero() {
       />
       <div style={s.overlay} />
 
-      {/* Centro: logo + tagline */}
       <div style={s.center}>
-        <div style={s.scriptLogo}>esca</div>
+        <div style={{ ...s.scriptLogo, fontSize: logoSize }}>esca</div>
         <p style={s.tagline}>COCINA DE ORIGEN</p>
       </div>
 
-      {/* Indicador scroll — clickeable */}
       <button style={s.scrollWrap} onClick={handleScroll}>
         <span style={s.scrollText}>SCROLL</span>
         <div style={s.scrollLine} />
@@ -43,22 +46,20 @@ const s = {
     position: 'absolute', top: '50%', left: '50%',
     transform: 'translate(-50%, -56%)',
     textAlign: 'center', pointerEvents: 'none', userSelect: 'none',
+    width: '80%',
   },
   scriptLogo: {
     fontFamily: "'Pinyon Script', cursive",
-    fontSize: 120,
-    color: '#ffffff',
-    lineHeight: 1,
-    letterSpacing: '0.02em',
+    color: '#ffffff', lineHeight: 1, letterSpacing: '0.02em',
   },
   tagline: {
     fontFamily: "'DM Sans', sans-serif",
-    fontSize: 12, fontWeight: 400,
+    fontSize: 11, fontWeight: 400,
     letterSpacing: '0.35em', color: '#f1eddc',
-    textTransform: 'uppercase', marginTop: 24,
+    textTransform: 'uppercase', marginTop: 20,
   },
   scrollWrap: {
-    position: 'absolute', bottom: 36, left: '50%',
+    position: 'absolute', bottom: 32, left: '50%',
     transform: 'translateX(-50%)',
     display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10,
     background: 'none', border: 'none', cursor: 'pointer',
