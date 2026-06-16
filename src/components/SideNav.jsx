@@ -2,9 +2,10 @@ import { useState, useEffect, useCallback } from 'react'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 
 const NAV_PRIMARY = [
-  { label: 'Restaurante', href: '/restaurante/' },
-  { label: 'Cava',        href: '/cava/'        },
-  { label: 'Menú',        href: '/menu/'        },
+  { label: 'Restaurante', href: null },
+  { label: 'Cava',        href: null },
+  { label: 'Menú',        href: null },
+  { label: 'Eventos',     href: null },
 ]
 const NAV_SECONDARY = []
 
@@ -93,10 +94,10 @@ export default function SideNav() {
               <ul style={s.primary}>
                 {NAV_PRIMARY.map(({ label, href }) => (
                   <li key={label}>
-                    <a href={href} className="link-underline"
-                      style={{ ...s.primaryItem, fontSize: primarySize }}>
-                      {label}
-                    </a>
+                    {href
+                      ? <a href={href} style={{ ...s.primaryItem, fontSize: primarySize }}>{label}</a>
+                      : <span style={{ ...s.primaryItem, fontSize: primarySize, cursor: 'default' }}>{label}</span>
+                    }
                   </li>
                 ))}
               </ul>
