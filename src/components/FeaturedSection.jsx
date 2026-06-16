@@ -9,6 +9,7 @@ const PANELS = [
     cta: 'Ver carta',
     href: '/menu',
     img: menuImg,
+    imgPosition: 'center',
   },
   {
     label: 'Vinoteca',
@@ -16,6 +17,7 @@ const PANELS = [
     cta: 'Saber más',
     href: '/cava',
     img: cavaImg,
+    imgPosition: 'center bottom',
   },
 ]
 
@@ -27,13 +29,13 @@ export default function FeaturedSection() {
       ...s.section,
       gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
     }}>
-      {PANELS.map(({ label, title, cta, href, img }) => (
+      {PANELS.map(({ label, title, cta, href, img, imgPosition }) => (
         <div key={label} style={{
           ...s.panel,
           height: isMobile ? '55vw' : '70vh',
           minHeight: isMobile ? 280 : 420,
         }} className="featured-panel">
-          <img src={img} alt={title} style={s.bg} className="featured-bg" />
+          <img src={img} alt={title} style={{ ...s.bg, objectPosition: imgPosition }} className="featured-bg" />
           <div style={s.overlay} />
           <div style={s.content}>
             <p style={s.label}>{label}</p>
