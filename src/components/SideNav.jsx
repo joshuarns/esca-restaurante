@@ -2,16 +2,11 @@ import { useState, useEffect, useCallback } from 'react'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 
 const NAV_PRIMARY = [
-  { label: 'Restaurant', href: '/restaurant/' },
-  { label: 'Cellar',     href: '/cellar/'     },
-  { label: 'Events',     href: '/events/'     },
-  { label: 'Journal',    href: '/journal/'    },
+  { label: 'Restaurante', href: '/restaurante/' },
+  { label: 'Cava',        href: '/cava/'        },
+  { label: 'Menú',        href: '/menu/'        },
 ]
-const NAV_SECONDARY = [
-  { label: 'FAQs',       href: '/faqs/'       },
-  { label: 'Contact',    href: '/contact/'    },
-  { label: 'Gift Cards', href: 'https://squareup.com/gift/MLJP0JSYHM240/order' },
-]
+const NAV_SECONDARY = []
 
 const ANIM_DURATION = 460
 
