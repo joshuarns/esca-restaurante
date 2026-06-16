@@ -1,4 +1,5 @@
 import { useBreakpoint } from '../hooks/useBreakpoint'
+import escaLogo from '../img/esca-logo-white.png'
 
 export default function AboutSection() {
   const { isMobile, isTablet } = useBreakpoint()
@@ -26,7 +27,11 @@ export default function AboutSection() {
           concepción de los espacios.
         </p>
 
-        <div style={{ ...s.scriptLogo, fontSize: isMobile ? 40 : 56 }}>esca</div>
+        <img
+          src={escaLogo}
+          alt="esca"
+          style={{ width: isMobile ? 100 : 140, opacity: 0.35, filter: 'sepia(1) brightness(0.6)', marginBottom: 44 }}
+        />
 
         <a href="/equipo" style={s.cta}>
           CONOCE AL EQUIPO
@@ -66,11 +71,6 @@ const s = {
     fontFamily: "'DM Sans', sans-serif",
     fontWeight: 300, lineHeight: 1.85,
     color: '#3a3530', maxWidth: 620, marginBottom: 52,
-  },
-  scriptLogo: {
-    fontFamily: "'Pinyon Script', cursive",
-    color: '#c4b99a', lineHeight: 1, marginBottom: 44,
-    userSelect: 'none',
   },
   cta: {
     display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: 6,

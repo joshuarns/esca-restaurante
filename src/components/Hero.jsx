@@ -1,9 +1,10 @@
 import { useBreakpoint } from '../hooks/useBreakpoint'
+import escaLogo from '../img/esca-logo-white.png'
 
 export default function Hero() {
   const { isMobile, isTablet } = useBreakpoint()
 
-  const logoSize  = isMobile ? 72  : isTablet ? 96  : 120
+  const logoWidth = isMobile ? 160 : isTablet ? 220 : 280
   const handleScroll = () =>
     window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
 
@@ -17,7 +18,7 @@ export default function Hero() {
       <div style={s.overlay} />
 
       <div style={s.center}>
-        <div style={{ ...s.scriptLogo, fontSize: logoSize }}>esca</div>
+        <img src={escaLogo} alt="esca" style={{ width: logoWidth, display: 'block', margin: '0 auto' }} />
         <p style={s.tagline}>COCINA DE ORIGEN</p>
       </div>
 
@@ -47,10 +48,6 @@ const s = {
     transform: 'translate(-50%, -56%)',
     textAlign: 'center', pointerEvents: 'none', userSelect: 'none',
     width: '80%',
-  },
-  scriptLogo: {
-    fontFamily: "'Pinyon Script', cursive",
-    color: '#ffffff', lineHeight: 1, letterSpacing: '0.02em',
   },
   tagline: {
     fontFamily: "'DM Sans', sans-serif",
