@@ -50,7 +50,7 @@ const s = {
     alignItems: 'center', textAlign: 'center',
   },
   title: {
-    fontFamily: "'DM Serif Display', serif",
+    fontFamily: "'Playfair Display', serif",
     fontSize: 'clamp(34px, 5vw, 62px)',
     fontWeight: 400, color: '#1d1d1b',
     letterSpacing: '-0.01em', lineHeight: 1.1,
@@ -67,14 +67,14 @@ const s = {
     alignItems: 'center', gap: 18,
   },
   quoteText: {
-    fontFamily: "'DM Serif Display', serif",
+    fontFamily: "'Playfair Display', serif",
     fontStyle: 'italic',
     fontSize: 'clamp(16px, 2vw, 21px)',
     fontWeight: 400, lineHeight: 1.75,
     color: '#3a3530', maxWidth: 560,
   },
   author: {
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Hanken Grotesk', sans-serif",
     fontSize: 12, fontWeight: 400,
     letterSpacing: '0.25em', textTransform: 'uppercase',
     color: '#8a7f6e', fontStyle: 'normal',
@@ -84,7 +84,7 @@ const s = {
     paddingTop: 36, width: '100%',
   },
   body: {
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Hanken Grotesk', sans-serif",
     fontWeight: 300, lineHeight: 1.85,
     color: '#3a3530', maxWidth: 600, margin: '0 auto',
   },

@@ -50,7 +50,7 @@ const s = {
     width: '80%',
   },
   tagline: {
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Hanken Grotesk', sans-serif",
     fontSize: 11, fontWeight: 400,
     letterSpacing: '0.2em', color: '#f1eddc',
     marginTop: 20,
@@ -62,7 +62,7 @@ const s = {
     background: 'none', border: 'none', cursor: 'pointer',
   },
   scrollText: {
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Hanken Grotesk', sans-serif",
     fontSize: 10, letterSpacing: '0.3em',
     color: '#f1eddc', textTransform: 'uppercase', opacity: 0.7,
   },

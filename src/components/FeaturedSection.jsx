@@ -4,7 +4,6 @@ import cavaImg from '../img/caratula-la-cava.jpg'
 
 const PANELS = [
   {
-    label: 'Gastronomía',
     title: 'El Menú',
     cta: 'Ver carta',
     href: '/menu',
@@ -12,7 +11,6 @@ const PANELS = [
     imgPosition: 'center',
   },
   {
-    label: 'Vinoteca',
     title: 'La Cava',
     cta: 'Saber más',
     href: '/cava',
@@ -29,8 +27,8 @@ export default function FeaturedSection() {
       ...s.section,
       gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
     }}>
-      {PANELS.map(({ label, title, cta, href, img, imgPosition }) => (
-        <div key={label} style={{
+      {PANELS.map(({ title, cta, href, img, imgPosition }) => (
+        <div key={title} style={{
           ...s.panel,
           height: isMobile ? '55vw' : '70vh',
           minHeight: isMobile ? 280 : 420,
@@ -38,7 +36,6 @@ export default function FeaturedSection() {
           <img src={img} alt={title} style={{ ...s.bg, objectPosition: imgPosition }} className="featured-bg" />
           <div style={s.overlay} />
           <div style={s.content}>
-            <p style={s.label}>{label}</p>
             <h3 style={s.title}>{title}</h3>
             <a href={href} style={s.btn} className="featured-btn">{cta}</a>
           </div>
@@ -77,20 +74,20 @@ const s = {
     gap: 16, padding: '0 24px',
   },
   label: {
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Hanken Grotesk', sans-serif",
     fontSize: 11, fontWeight: 400,
     letterSpacing: '0.3em', textTransform: 'uppercase',
     color: 'rgba(241,237,220,0.7)',
   },
   title: {
-    fontFamily: "'Pinyon Script', cursive",
-    fontSize: 'clamp(44px, 6vw, 80px)',
-    fontWeight: 400, color: '#ffffff',
-    lineHeight: 1.1, letterSpacing: '0.02em',
+    fontFamily: "'Playfair Display', serif",
+    fontSize: 'clamp(36px, 5vw, 56px)',
+    fontWeight: 500, color: '#ffffff',
+    lineHeight: 1.1, letterSpacing: '-0.01em',
   },
   btn: {
     marginTop: 8,
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Hanken Grotesk', sans-serif",
     fontSize: 11, fontWeight: 400,
     letterSpacing: '0.22em', textTransform: 'uppercase',
     color: '#f1eddc', textDecoration: 'none',

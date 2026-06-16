@@ -9,7 +9,7 @@ export default function EscaLogo({ color = 'currentColor', style, className }) {
   return (
     <div style={{ ...style, color, textAlign: 'center' }} className={className}>
       <div style={{
-        fontFamily: "'DM Sans', sans-serif",
+        fontFamily: "'Hanken Grotesk', sans-serif",
         fontWeight: 300,
         fontSize: titleSize,
         letterSpacing: '0.4em',
@@ -19,7 +19,7 @@ export default function EscaLogo({ color = 'currentColor', style, className }) {
         ESCA
       </div>
       <div style={{
-        fontFamily: "'DM Sans', sans-serif",
+        fontFamily: "'Hanken Grotesk', sans-serif",
         fontWeight: 300,
         fontSize: subSize,
         letterSpacing: '0.3em',

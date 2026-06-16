@@ -21,7 +21,7 @@ html, body {
 body {
   background-color: var(--beige);
   color: var(--black);
-  font-family: 'DM Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Hanken Grotesk', -apple-system, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   line-height: 1.4;
 }
