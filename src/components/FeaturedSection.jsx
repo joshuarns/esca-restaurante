@@ -1,4 +1,6 @@
 import { useBreakpoint } from '../hooks/useBreakpoint'
+import menuImg from '../img/caratula-menu.jpg'
+import cavaImg from '../img/caratula-la-cava.jpg'
 
 const PANELS = [
   {
@@ -6,14 +8,14 @@ const PANELS = [
     title: 'El Menú',
     cta: 'Ver carta',
     href: '/menu',
-    img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=85',
+    img: menuImg,
   },
   {
     label: 'Vinoteca',
     title: 'La Cava',
     cta: 'Saber más',
     href: '/cava',
-    img: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=85',
+    img: cavaImg,
   },
 ]
 
