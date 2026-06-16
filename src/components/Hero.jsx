@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div style={s.center}>
         <img src={escaLogo} alt="esca" style={{ width: logoWidth, display: 'block', margin: '0 auto' }} />
-        <p style={s.tagline}>COCINA DE ORIGEN</p>
+        <p style={s.tagline}>Cocina Italiana contemporánea</p>
       </div>
 
       <button style={s.scrollWrap} onClick={handleScroll}>
@@ -52,8 +52,8 @@ const s = {
   tagline: {
     fontFamily: "'DM Sans', sans-serif",
     fontSize: 11, fontWeight: 400,
-    letterSpacing: '0.35em', color: '#f1eddc',
-    textTransform: 'uppercase', marginTop: 20,
+    letterSpacing: '0.2em', color: '#f1eddc',
+    marginTop: 20,
   },
   scrollWrap: {
     position: 'absolute', bottom: 32, left: '50%',
