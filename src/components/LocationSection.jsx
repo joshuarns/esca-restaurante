@@ -19,7 +19,7 @@ export default function LocationSection() {
       }}>
 
         <div style={s.textCol}>
-          <h2 style={s.headline}>Donde el fuego{!isMobile && <br />} cobra vida.</h2>
+          <h2 style={s.headline}>Información práctica</h2>
 
           <div style={s.block}>
             <p style={s.label}>Ubicación</p>
@@ -35,8 +35,25 @@ export default function LocationSection() {
 
           <div style={s.block}>
             <p style={s.label}>Horario</p>
-            <p style={s.line}>Mar - Sáb: 13:30 – 16:00 | 20:30 – 23:30</p>
-            <p style={s.line}>Dom: 13:30 – 16:30</p>
+            <p style={s.line}>Mart – Dom: 1pm a 12am</p>
+            <p style={s.line}>Lunes: Cerrado</p>
+          </div>
+
+          <div style={s.block}>
+            <p style={s.label}>Síguenos</p>
+            <a
+              href="https://www.instagram.com/escarestaurante"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={s.igBtn}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+              @escarestaurante
+            </a>
           </div>
         </div>
 
@@ -82,6 +99,16 @@ const s = {
     fontFamily: "'Hanken Grotesk', sans-serif",
     fontSize: 15, fontWeight: 400, lineHeight: 1.6,
     color: '#1d1d1b',
+  },
+  igBtn: {
+    display: 'inline-flex', alignItems: 'center', gap: 8,
+    fontFamily: "'Hanken Grotesk', sans-serif",
+    fontSize: 13, fontWeight: 400, letterSpacing: '0.04em',
+    color: '#1d1d1b',
+    border: '1px solid rgba(29,29,27,0.35)',
+    padding: '9px 16px',
+    textDecoration: 'none',
+    transition: 'background .2s, color .2s',
   },
   imageCol: {
     width: '100%',

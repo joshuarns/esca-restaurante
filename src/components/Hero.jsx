@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div style={s.center}>
         <img src={escaLogo} alt="esca" style={{ width: logoWidth, display: 'block', margin: '0 auto' }} />
-        <p style={s.tagline}>Cocina Italiana contemporánea</p>
+        <p style={s.tagline}>Cocina italiana contemporánea</p>
       </div>
 
       <button style={s.scrollWrap} onClick={handleScroll}>

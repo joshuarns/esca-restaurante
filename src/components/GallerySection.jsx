@@ -75,7 +75,7 @@ const s = {
   },
   img: {
     width: '100%', height: '100%',
-    objectFit: 'cover', objectPosition: 'center',
+    objectFit: 'cover', objectPosition: '50% 25%',
     display: 'block',
   },
 }
