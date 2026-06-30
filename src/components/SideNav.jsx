@@ -1,12 +1,9 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useBreakpoint } from '../hooks/useBreakpoint'
-import menuPdf from '../assets/documents/menu_esca.pdf'
-import vinosPdf from '../assets/documents/vinos_esca.pdf'
-
 const NAV_PRIMARY = [
   { label: 'Restaurante', href: null },
-  { label: 'Menú',        href: menuPdf,   blank: true },
-  { label: 'Cava',        href: vinosPdf,  blank: true },
+  { label: 'Menú',        href: '/menu_esca.pdf',   blank: true },
+  { label: 'Cava',        href: '/vinos_esca.pdf',  blank: true },
   { label: 'Eventos',     href: null },
 ]
 const NAV_SECONDARY = []

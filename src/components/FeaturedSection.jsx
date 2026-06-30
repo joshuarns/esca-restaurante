@@ -1,21 +1,18 @@
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import menuImg from '../img/caratula-menu.jpg'
 import cavaImg from '../img/caratula-la-cava.jpg'
-import menuPdf from '../assets/documents/menu_esca.pdf'
-import vinosPdf from '../assets/documents/vinos_esca.pdf'
-
 const PANELS = [
   {
     title: 'El Menú',
     cta: 'Ver carta',
-    href: menuPdf,
+    href: '/menu_esca.pdf',
     img: menuImg,
     imgPosition: 'center',
   },
   {
     title: 'La Cava',
     cta: 'Saber más',
-    href: vinosPdf,
+    href: '/vinos_esca.pdf',
     img: cavaImg,
     imgPosition: 'center bottom',
   },
