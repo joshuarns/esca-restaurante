@@ -1,19 +1,21 @@
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import menuImg from '../img/caratula-menu.jpg'
 import cavaImg from '../img/caratula-la-cava.jpg'
+import menuPdf from '../assets/documents/menu_esca.pdf'
+import vinosPdf from '../assets/documents/vinos_esca.pdf'
 
 const PANELS = [
   {
     title: 'El Menú',
     cta: 'Ver carta',
-    href: '/menu',
+    href: menuPdf,
     img: menuImg,
     imgPosition: 'center',
   },
   {
     title: 'La Cava',
     cta: 'Saber más',
-    href: '/cava',
+    href: vinosPdf,
     img: cavaImg,
     imgPosition: 'center bottom',
   },
@@ -37,7 +39,7 @@ export default function FeaturedSection() {
           <div style={s.overlay} />
           <div style={s.content}>
             <h3 style={s.title}>{title}</h3>
-            <a href={href} style={s.btn} className="featured-btn">{cta}</a>
+            <a href={href} style={s.btn} className="featured-btn" target="_blank" rel="noopener noreferrer">{cta}</a>
           </div>
         </div>
       ))}

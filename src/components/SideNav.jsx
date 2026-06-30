@@ -1,10 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useBreakpoint } from '../hooks/useBreakpoint'
+import menuPdf from '../assets/documents/menu_esca.pdf'
+import vinosPdf from '../assets/documents/vinos_esca.pdf'
 
 const NAV_PRIMARY = [
   { label: 'Restaurante', href: null },
-  { label: 'Cava',        href: null },
-  { label: 'Menú',        href: null },
+  { label: 'Menú',        href: menuPdf,   blank: true },
+  { label: 'Cava',        href: vinosPdf,  blank: true },
   { label: 'Eventos',     href: null },
 ]
 const NAV_SECONDARY = []
@@ -92,10 +94,10 @@ export default function SideNav() {
             {/* Primary nav */}
             <nav>
               <ul style={s.primary}>
-                {NAV_PRIMARY.map(({ label, href }) => (
+                {NAV_PRIMARY.map(({ label, href, blank }) => (
                   <li key={label}>
                     {href
-                      ? <a href={href} style={{ ...s.primaryItem, fontSize: primarySize }}>{label}</a>
+                      ? <a href={href} style={{ ...s.primaryItem, fontSize: primarySize }} target={blank ? '_blank' : undefined} rel={blank ? 'noopener noreferrer' : undefined}>{label}</a>
                       : <span style={{ ...s.primaryItem, fontSize: primarySize, cursor: 'default' }}>{label}</span>
                     }
                   </li>
