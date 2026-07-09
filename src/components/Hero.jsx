@@ -1,5 +1,6 @@
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import escaLogo from '../img/esca-logo-white.png'
+import heroBg from '../assets/img/esca-restaurante.jpg'
 
 export default function Hero() {
   const { isMobile, isTablet } = useBreakpoint()
@@ -11,7 +12,7 @@ export default function Hero() {
   return (
     <div style={s.wrapper}>
       <img
-        src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1920&q=90"
+        src={heroBg}
         alt=""
         style={s.bg}
       />
