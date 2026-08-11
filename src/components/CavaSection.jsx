@@ -10,14 +10,14 @@ export default function CavaSection() {
     <section style={{ ...s.section, padding: `${padV}px ${padH}px` }}>
       <div style={s.inner}>
 
-        <h2 style={s.title}>La cava de Esca</h2>
+        <h2 style={s.title}>Curaduría de vino</h2>
 
         <div style={s.divider} />
 
         <blockquote style={s.quote}>
           <p style={s.quoteText}>
             "La experiencia de nuestros clientes siempre va a ser especial,
-            tenemos vinos que solo están aquí y que además nos permiten entablar
+            tenemos vinos que sólo están aquí y que además nos permiten entablar
             conversaciones largas alrededor del vino, que es mi gran pasión".
           </p>
           <cite style={s.author}>Rolly Pavia</cite>
@@ -26,9 +26,9 @@ export default function CavaSection() {
         <div style={s.bodyBox}>
           <p style={{ ...s.body, fontSize: isMobile ? 14 : 16 }}>
             Si los crudos son el corazón de Esca, el vino es la sangre que corre
-            por las venas del restaurante. Con más de 39 bodegas importadas y 9
-            productores exclusivos, la carta de vinos ofrece también vinos
-            orgánicos y biodinámicos.
+            por las venas del restaurante. Un programa que nace de la pasión, el
+            criterio y la búsqueda con una selección para el proyecto con más de
+            40 bodegas exclusivas.
           </p>
         </div>
 

@@ -15,16 +15,16 @@ export default function AboutSection() {
         <p style={s.label}>Nuestra cocina</p>
 
         <h2 style={s.headline}>
-          Sensibilidad italiana,{isMobile ? ' ' : <br />}producto de mar.
+          Sensibilidad italiana,{isMobile ? ' ' : <br />}producto de mar
         </h2>
 
         <p style={{ ...s.body, fontSize: bodySize }}>
-          Nuestra inspiración proviene de las costas y del producto que ofrecen,
+          Nuestra inspiración proviene de las costas mexicanas y del producto que ofrecen,
           los platillos toman la forma que le dan nuestros viajes, lo que nos
           gusta comer y lo que ocurre con la cocina de mar en el mundo. Esca es
           un restaurante que ofrece a sus comensales una experiencia redonda que
-          cuida de todos los sentidos: desde la concepción del menú hasta la
-          concepción de los espacios.
+          cuida de todos los sentidos: desde la concepción del menú hasta el
+          diseño de los espacios.
         </p>
 
         <img
@@ -32,11 +32,6 @@ export default function AboutSection() {
           alt="esca"
           style={{ width: isMobile ? 100 : 140, opacity: 0.35, filter: 'sepia(1) brightness(0.6)', marginBottom: 44 }}
         />
-
-        <a href="/equipo" style={s.cta}>
-          CONOCE AL EQUIPO
-          <span style={s.ctaLine} />
-        </a>
 
       </div>
     </section>
