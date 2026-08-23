@@ -7,8 +7,8 @@ import squareImg2 from '../img/DSCF3545.jpg'
 export default function GallerySection() {
   const { isMobile, isTablet } = useBreakpoint()
 
-  const padH = isMobile ? 16 : isTablet ? 32 : 60
-  const padV = isMobile ? 16 : isTablet ? 24 : 40
+  const padH = isMobile ? 0  : isTablet ? 32 : 60
+  const padV = isMobile ? 32 : isTablet ? 24 : 40
   const gap  = 6
 
   if (isMobile) {

@@ -5,7 +5,7 @@ export default function LocationSection() {
   const { isMobile, isTablet } = useBreakpoint()
 
   const padV = isMobile ? 72 : isTablet ? 88 : 100
-  const padH = isMobile ? 24 : isTablet ? 48 : 80
+  const padH = isMobile ? 52 : isTablet ? 48 : 80
 
   return (
     <section style={{
