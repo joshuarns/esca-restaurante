@@ -1,10 +1,9 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useBreakpoint } from '../hooks/useBreakpoint'
 const NAV_PRIMARY = [
-  { label: 'Restaurante', href: null },
-  { label: 'Menú',        href: '/menu_esca.pdf',   blank: true },
-  { label: 'Cava',        href: '/vinos_esca.pdf',  blank: true },
-  { label: 'Eventos',     href: null },
+  { label: 'Menú',    href: '/menu_esca.pdf',                                    blank: true },
+  { label: 'Cava',    href: '/vinos_esca.pdf',                                   blank: true },
+  { label: 'Eventos', href: 'mailto:hola@escarestaurante.com?subject=Consulta%20de%20eventos', blank: false },
 ]
 const NAV_SECONDARY = []
 
