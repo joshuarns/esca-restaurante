@@ -108,6 +108,17 @@ ul { list-style: none; }
 .nav-drawer-in   { animation: drawerIn  0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
 .nav-drawer-out  { animation: drawerOut 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
 
+@keyframes drawerRightIn {
+  from { transform: translateX(100%) }
+  to   { transform: translateX(0) }
+}
+@keyframes drawerRightOut {
+  from { transform: translateX(0) }
+  to   { transform: translateX(100%) }
+}
+.res-drawer-in  { animation: drawerRightIn  0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.res-drawer-out { animation: drawerRightOut 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
