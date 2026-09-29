@@ -1,5 +1,6 @@
 import { useBreakpoint } from '../hooks/useBreakpoint'
 import locationImg from '../img/portada.jpg'
+import escaLogo from '../assets/img/logo-esca.png'
 
 export default function LocationSection() {
   const { isMobile, isTablet } = useBreakpoint()
@@ -19,7 +20,7 @@ export default function LocationSection() {
       }}>
 
         <div style={s.textCol}>
-          <h2 style={s.headline}>Información práctica</h2>
+          <img src={escaLogo} alt="Esca Restaurante" style={s.logo} />
 
           <div style={s.block}>
             <p style={s.label}>Ubicación</p>
@@ -29,8 +30,15 @@ export default function LocationSection() {
 
           <div style={s.block}>
             <p style={s.label}>Reservas</p>
-            <p style={s.line}>+52 55 0000 0000</p>
-            <p style={s.line}>hola@escarestaurante.com</p>
+            <a href="tel:+525573607463" style={s.line}>+52 55 7360 7463</a>
+            <a
+              href="https://www.opentable.com.mx/r/esca-ciudad-de-mexico"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={s.line}
+            >
+              Reservar en OpenTable
+            </a>
           </div>
 
           <div style={s.block}>
@@ -42,12 +50,12 @@ export default function LocationSection() {
           <div style={s.block}>
             <p style={s.label}>Síguenos</p>
             <a
-              href="https://www.instagram.com/escarestaurante"
+              href="https://www.instagram.com/esca_mx/"
               target="_blank"
               rel="noopener noreferrer"
               style={s.igLink}
             >
-              Síguenos en @escarestaurante
+              Instagram @escarestaurante
             </a>
           </div>
         </div>
@@ -74,12 +82,8 @@ const s = {
   textCol: {
     display: 'flex', flexDirection: 'column',
   },
-  headline: {
-    fontFamily: "'Playfair Display', serif",
-    fontSize: 'clamp(30px, 4vw, 46px)',
-    fontWeight: 600, lineHeight: 1.2,
-    color: '#1d1d1b', marginBottom: 40,
-    letterSpacing: '-0.01em',
+  logo: {
+    width: 140, marginBottom: 40, display: 'block',
   },
   block: {
     marginBottom: 28,
@@ -93,7 +97,7 @@ const s = {
   line: {
     fontFamily: "'Hanken Grotesk', sans-serif",
     fontSize: 15, fontWeight: 400, lineHeight: 1.6,
-    color: '#1d1d1b',
+    color: '#1d1d1b', textDecoration: 'none', display: 'block',
   },
   igLink: {
     fontFamily: "'Hanken Grotesk', sans-serif",
