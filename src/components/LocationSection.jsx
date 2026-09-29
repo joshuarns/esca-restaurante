@@ -84,6 +84,7 @@ const s = {
   },
   logo: {
     width: 140, marginBottom: 40, display: 'block',
+    filter: 'brightness(0)',
   },
   block: {
     marginBottom: 28,
